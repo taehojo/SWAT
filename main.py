@@ -1,9 +1,9 @@
 import argparse
 import pandas as pd
-from utils import load_data, impute_data, preprocess_data
-from classifier import train_and_test
-from visualization import plot_accuracies, plot_feature_importances
-from api import get_snp_details
+from scripts.utils import load_data, impute_data, preprocess_data
+from scripts.classifier import train_and_test
+from scripts.visualization import plot_accuracies, plot_feature_importances
+from scripts.api import get_snp_details
 
 def main(file, window_size, imputation_method):
     data = load_data(file)
