@@ -10,7 +10,7 @@ def main(file, window_size, imputation_method):
     data_imputed = impute_data(data, imputation_method)
 
     # Preprocess data
-    features, labels = preprocess_data(data_imputed, data, window_size)
+    features, labels = preprocess_data(data_imputed, data)
 
     # Train and test
     clf, accuracies, window_indices = train_and_test(features, labels, window_size)
