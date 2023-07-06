@@ -15,13 +15,13 @@ To install and run this tool, follow these steps:
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/snp_analysis.git
+git clone https://github.com/taehojo/SWAT.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd snp_analysis
+cd SWAT
 ```
 
 3. Install the required Python packages. It's recommended to do this in a virtual environment:
@@ -45,7 +45,7 @@ where:
 
 For example:
 ```bash
-python main.py --file data/genome_data.csv --window_size 500 --imputation_method simple
+python main.py --file sample/ADSP-NHW-APOE-1000-small --window_size 200 --imputation_method simple
 ```
 
 This will start the SNP analysis and save the results in the results directory. The results will include CSV files with the top 20 features and accuracy results, and PNG files with plots of accuracies and feature importances.
