@@ -51,7 +51,13 @@ python main.py --file sample/SampleWithAPOE --window_size 200 --imputation_metho
 This will start the SNP analysis and save the results in the results directory. The results will include CSV files with the top 20 features and accuracy results, and PNG files with plots of accuracies and feature importances.
 
 
+:bookmark: **SWAT citation:**
 
-:bookmark: **Citation:**
+> in preparation
+
+
+:bookmark: **Example of SWAT application:**
 
 > Jo, Taeho, et al. "Deep learning-based identification of genetic variants: application to Alzheimer’s disease classification." Briefings in Bioinformatics 23.2 (2022): bbac022.
+
+
