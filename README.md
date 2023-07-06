@@ -50,4 +50,6 @@ python main.py --file sample/ADSP-NHW-APOE-1000-small --window_size 200 --imputa
 
 This will start the SNP analysis and save the results in the results directory. The results will include CSV files with the top 20 features and accuracy results, and PNG files with plots of accuracies and feature importances.
 
+```citation
 Jo, Taeho, et al. "Deep learning-based identification of genetic variants: application to Alzheimer’s disease classification." Briefings in Bioinformatics 23.2 (2022): bbac022. 
+```
