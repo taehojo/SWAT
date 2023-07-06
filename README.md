@@ -2,7 +2,7 @@
 
 ## Introduction
 
-SWAT (Sliding Window Association Test) is a tool for Whole Genome Sequencing (WGS) analysis using deep learning. It's a newly developed Python-based tool that aims to provide a robust and efficient way to analyze high-dimensional genomic data.
+SWAT (Sliding Window Association Test) is a tool for Whole Genome Sequencing (WGS) analysis using machine learning. It's a newly developed Python-based tool that aims to provide a robust and efficient way to analyze high-dimensional genomic data.
 
 SWAT is designed to identify phenotype-related single nucleotide polymorphisms (SNPs), making it particularly useful for developing accurate disease classification models. The tool also includes a sophisticated imputer which is capable of automatically filling in missing data, hence improving the quality of the analysis.
 
