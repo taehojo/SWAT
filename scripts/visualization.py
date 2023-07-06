@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 def plot_accuracies(window_indices, accuracies):
     plt.figure(figsize=(5, 5))
