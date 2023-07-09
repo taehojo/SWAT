@@ -34,21 +34,22 @@ pip install -r requirements.txt
 The tool can be run from the command line with the following syntax:
 
 ```bash
-python main.py --file [file] --window_size [window_size] --imputation_method [imputation_method]
+python main.py --input_file [input_file] --analysis_window_size [analysis_window_size] --missing_value_imputation_method [missing_value_imputation_method] --num_top_results [num_top_results]
 ```
 
 where:
 
-- `[file]` is the path to the input data file.
+- `[input_file]` is the path to the input data file.
 - `[window_size]` is the window size for analysis.
 - `[imputation_method]` is the imputation method used for dealing with missing data. You can choose from "simple", "1nn", "5nn", or "10nn". Here "simple" represents mean imputation and "1nn", "5nn", "10nn" represents the k-Nearest Neighbors method with k being 1, 5, and 10 respectively.
+- `[num_top_results]` is the number of top results to output. The default is 20.
 
 For example:
 ```bash
-python main.py --file sample/SampleWithAPOE --window_size 200 --imputation_method simple
+python main.py --input_file sample/SampleWithAPOE --analysis_window_size 200 --missing_value_imputation_method simple --num_top_results 30
 ```
 
-This will start the SNP analysis and save the results in the results directory. The results will include CSV files with the top 20 features and accuracy results, and PNG files with plots of accuracies and feature importances.
+This will start the SNP analysis and save the results in the results directory. The results will include CSV files with the top N features and accuracy results, and PNG files with plots of accuracies and feature importances. Here N is the number of top results specified.
 
 
 :bookmark: **SWAT citation:**

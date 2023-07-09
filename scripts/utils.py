@@ -22,4 +22,3 @@ def preprocess_data(data, window_size):
     labels = data.iloc[:, 0]
     labels = labels.apply(lambda x: 'rs_ith' if x == '.' else x)
     return features, labels
-

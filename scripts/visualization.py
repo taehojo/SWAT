@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_accuracies(window_indices, accuracies):
+def plot_accuracies(window_indices, accuracies, filename):
     plt.figure(figsize=(5, 5))
     plt.plot(window_indices, accuracies)
     plt.xticks(rotation=0)
@@ -9,9 +9,9 @@ def plot_accuracies(window_indices, accuracies):
     plt.xlabel('Window position')
     plt.ylabel('Accuracy')
     plt.tight_layout()
-    plt.savefig('accuracy_per_window.png')
+    plt.savefig(filename)
 
-def plot_feature_importances(feature_importances, feature_names):
+def plot_feature_importances(feature_importances, feature_names, filename):
     plt.figure(figsize=(12, 5))
     plt.bar(range(len(feature_importances)), feature_importances, width=1.5, tick_label=feature_names)
     plt.xticks(np.arange(0, len(feature_importances), 1000), np.arange(0, len(feature_importances), 1000))
@@ -24,5 +24,5 @@ def plot_feature_importances(feature_importances, feature_names):
     for i in top_5_indices:
         plt.text(i, feature_importances[i], feature_names[i], ha='center', va='bottom')
     
-    plt.savefig('feature_importances.png')
+    plt.savefig(filename)
 
