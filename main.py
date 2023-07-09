@@ -63,12 +63,12 @@ def main(file, window_size, imputation_method, num_results):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Perform SNP Analysis')
-    parser.add_argument('--input_file', type=str, required=True, help='Path to the input file')
-    parser.add_argument('--window_size', type=int, required=True, help='Window size for analysis')
-    parser.add_argument('--imputation_method', type=str, required=True, help='Imputation method. Choose from "simple", "1nn", "5nn", "10nn"')
-    parser.add_argument('--num_top_results', type=int, default=20, help='Number of top results to output.')
-    parser.add_argument('--num_parallel_jobs', type=int, default=-1, help='Number of jobs to run in parallel. -1 means using all processors.')
+    parser.add_argument('input_file', type=str, help='Path to the input data file')
+    parser.add_argument('--win', type=int, default=200, help='Window size for analysis')
+    parser.add_argument('--imputation', type=str, default='simple', help='Imputation method. Choose from "simple", "1nn", "5nn", "10nn"')
+    parser.add_argument('--num_results', type=int, default=20, help='Number of top results to output.')
+    parser.add_argument('--num_jobs', type=int, default=-1, help='Number of jobs to run in parallel. -1 means using all processors.')
 
     args = parser.parse_args()
 
-    main(args.input_file, args.window_size, args.imputation_method, args.num_top_results)
+    main(args.input_file, args.window_size, args.imputation_method, args.num_top_results, args.num_parallel_jobs)

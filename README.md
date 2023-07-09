@@ -34,19 +34,20 @@ pip install -r requirements.txt
 The tool can be run from the command line with the following syntax:
 
 ```bash
-python main.py --input_file [input_file] --window_size [analysis_window_size] --imputation_method [missing_value_imputation_method] --num_top_results [num_top_results]
+python main.py [input_file] --win [window_size] --imputation [imputation_method] --num_results [num_top_results] --num_jobs [num_parallel_jobs]
 ```
 
 where:
 
-- `[input_file]` is the path to the input data file.
+- `[input_file]` is the path to the input data file(required).
 - `[window_size]` is the window size for analysis.
 - `[imputation_method]` is the imputation method used for dealing with missing data. You can choose from "simple", "1nn", "5nn", or "10nn". Here "simple" represents mean imputation and "1nn", "5nn", "10nn" represents the k-Nearest Neighbors method with k being 1, 5, and 10 respectively.
 - `[num_top_results]` is the number of top results to output. The default is 20.
+- `[num_parallel_jobs]` is the number of jobs to run in parallel. -1 means using all processors.
 
 For example:
 ```bash
-python main.py --input_file sample/SampleWithAPOE --window_size 200 --imputation_method simple --num_top_results 30
+python main.py sample/SampleWithAPOE
 ```
 
 This will start the SNP analysis and save the results in the results directory. The results will include CSV files with the top N features and accuracy results, and PNG files with plots of accuracies and feature importances. Here N is the number of top results specified.
