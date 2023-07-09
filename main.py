@@ -8,7 +8,7 @@ import os
 import datetime
 import numpy as np
 
-def main(file, window_size, imputation_method, num_results):
+def main(file, window_size, imputation_method, num_results, num_parallel_jobs):
     # Create a results directory if it doesn't exist
     if not os.path.exists('results'):
         os.makedirs('results')
@@ -24,7 +24,7 @@ def main(file, window_size, imputation_method, num_results):
     features, labels = preprocess_data(data_imputed, data)
 
     # Train and test for each window
-    accuracies, window_indices = train_and_test_windows(features, labels, window_size)
+    accuracies, window_indices = train_and_test_windows(features, labels, window_size, num_parallel_jobs)
     
     # Visualize results
     plot_accuracies(window_indices, accuracies, f'results/accuracies_{timestamp}.png')
@@ -70,5 +70,4 @@ if __name__ == '__main__':
     parser.add_argument('--num_jobs', type=int, default=-1, help='Number of jobs to run in parallel. -1 means using all processors.')
 
     args = parser.parse_args()
-
     main(args.input_file, args.win, args.imputation, args.num_results, args.num_jobs)
