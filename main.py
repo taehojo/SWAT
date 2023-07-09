@@ -71,4 +71,4 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    main(args.input_file, args.window_size, args.imputation_method, args.num_top_results, args.num_parallel_jobs)
+    main(args.input_file, args.win, args.imputation, args.num_results, args.num_jobs)
