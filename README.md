@@ -30,6 +30,9 @@ cd SWAT
 pip install -r requirements.txt
 ```
 
+## Requirements
+- Python 3.8 or higher
+
 ## Usage
 The tool can be run from the command line with the following syntax:
 
