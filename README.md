@@ -63,6 +63,6 @@ This will start the SNP analysis and save the results in the results directory. 
 
 :bookmark: **Example of SWAT application:**
 
-> Jo, Taeho, et al. "Deep learning-based identification of genetic variants: application to Alzheimer’s disease classification." Briefings in Bioinformatics 23.2 (2022): bbac022.
+> Jo, Taeho, et al. "Deep learning-based identification of genetic variants: application to Alzheimer’s disease classification." Briefings in Bioinformatics 23.2 (2022)
 
 
