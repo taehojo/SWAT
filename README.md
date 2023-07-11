@@ -50,7 +50,7 @@ where:
 
 For example:
 ```bash
-python main.py sample/SampleWithAPOE
+python main.py sample/APOE_LD_Block.csv
 ```
 
 This will start the SNP analysis and save the results in the results directory. The results will include CSV files with the top N features and accuracy results, and PNG files with plots of accuracies and feature importances. Here N is the number of top results specified.
@@ -58,7 +58,7 @@ This will start the SNP analysis and save the results in the results directory. 
 
 :bookmark: **SWAT citation:**
 
-> in preparation
+> (in preparation)
 
 
 :bookmark: **Example of SWAT application:**
