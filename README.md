@@ -37,7 +37,7 @@ pip install -r requirements.txt
 The tool can be run from the command line with the following syntax:
 
 ```bash
-python main.py [input_file] --win [window_size] --imputation [imputation_method] --num_results [num_top_results] --num_jobs [num_parallel_jobs]
+python main.py [input_file] --win [window_size] --imputation [imputation_method] --num_results [num_top_results] --num_jobs [num_parallel_jobs] --classifier [classifier]
 ```
 
 where:
@@ -47,6 +47,7 @@ where:
 - `[imputation_method]` is the imputation method used for dealing with missing data. You can choose from "simple", "1nn", "5nn", or "10nn". Here "simple" represents mean imputation and "1nn", "5nn", "10nn" represents the k-Nearest Neighbors method with k being 1, 5, and 10 respectively.
 - `[num_top_results]` is the number of top results to output. The default is 20.
 - `[num_parallel_jobs]` is the number of jobs to run in parallel. -1 means using all processors.
+- `[classifier]`is the classifier to use. Choose "rf" for RandomForest and "dl" for Deep Learning.
 
 For example:
 ```bash
