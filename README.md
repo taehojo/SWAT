@@ -38,7 +38,7 @@ pip install -r requirements.txt
 The tool can be run from the command line with the following syntax:
 
 ```bash
-python main.py [input_file] --win [window_size] --imputation [imputation_method] --num_results [num_top_results] --num_jobs [num_parallel_jobs] --classifier [classifier] --name [output_file_name] --fast_run --no_plots --no_api --WGS_select --WGS_merge [merged_file_path]
+python main.py [input_file] --win [window_size] --imputation [imputation_method] --num_results [num_top_results] --num_jobs [num_parallel_jobs] --classifier [classifier] --name [output_file_name] --WGS_merge [merged_file_path] --WGS_select --fast_run --no_plots --no_api 
 
 ```
 
@@ -51,11 +51,13 @@ where:
 - `[num_parallel_jobs]` specifies the number of jobs to run in parallel. -1 means utilizing all processors. The default is to use all processors.
 - `[classifier]` indicates the classifier to use. Choose "rf" for RandomForest and "dl" for Deep Learning. The default is "rf".
 - `[output_file_name]` allows to choose a name for the output files instead of the timestamp.
+- `[merged_file_path]` is the path to a CSV file from which the script can load top accuracies and continue the analysis.
+- `--WGS_select` is an option to have the script save top accuracies to a CSV file for later use.
 - `--fast_run` is an option to execute the script only with the RandomForest classifier without creating plot images.
 - `--no_plots` is an option to prevent the creation of plot images.
 - `--no_api` is an option to prevent the script from making API calls to get SNP details.
-- `--WGS_select` is an option to have the script save top accuracies to a CSV file for later use.
-- `[merged_file_path]` is the path to a CSV file from which the script can load top accuracies and continue the analysis.
+
+
 
 
 Execution example:
