@@ -8,6 +8,7 @@ SWAT is designed to identify phenotype-related single nucleotide polymorphisms (
 
 You can also access the web implementation of this tool at [SWAT-web](https://www.swatweb.org).
 
+
 ## Installation
 
 To install and run this tool, follow these steps:
@@ -74,6 +75,11 @@ For example:
 ```
 
 This will handle large WGS files by breaking them into smaller chunks, running the SNP analysis on each chunk, and then merging the results.
+
+
+![SWAT web](https://www.swatweb.org/static/assets/images/swatweb.png)
+![Result1](https://www.swatweb.org/static/assets/images/accuracies.png)
+![Result2](https://www.swatweb.org/static/assets/images/feature_importances.png)
 
 
 :bookmark: **SWAT citation:**
