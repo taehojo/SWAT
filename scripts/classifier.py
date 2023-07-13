@@ -51,7 +51,7 @@ def train_and_test_windows(features, labels, window_size, num_parallel_jobs, cla
 
     return accuracies, window_indices
 
-def train_and_test_selected_features(features, labels):
+def train_and_test_selected_features(features, labels, fast_run=False):
 
     train_features, test_features, train_labels, test_labels = train_test_split(features, labels, test_size=0.2, random_state=77)
 
@@ -66,25 +66,29 @@ def train_and_test_selected_features(features, labels):
     rf_accuracy = accuracy_score(test_labels, rf_predictions)
     feature_importances_rf = clf_rf.feature_importances_
 
-    clf_dl = TabNetClassifier()
-    clf_dl.fit(
-        train_features, train_labels,
-        eval_set=[(train_features, train_labels), (test_features, test_labels)],
-        eval_name=['train', 'valid'],
-        eval_metric=['auc'],
-        max_epochs=500, patience=5,
-        batch_size=128, virtual_batch_size=64,
-        num_workers=0,
-        weights=1,
-        drop_last=False
-    )
-    dl_predictions = clf_dl.predict(test_features)
-    dl_accuracy = accuracy_score(test_labels, dl_predictions)
-    feature_importances_dl = clf_dl.feature_importances_
+    clf_dl = None
+    if not fast_run:
+        clf_dl = TabNetClassifier()
+        clf_dl.fit(
+            train_features, train_labels,
+            eval_set=[(train_features, train_labels), (test_features, test_labels)],
+            eval_name=['train', 'valid'],
+            eval_metric=['auc'],
+            max_epochs=500, patience=5,
+            batch_size=128, virtual_batch_size=64,
+            num_workers=0,
+            weights=1,
+            drop_last=False
+        )
+        dl_predictions = clf_dl.predict(test_features)
+        dl_accuracy = accuracy_score(test_labels, dl_predictions)
+        feature_importances_dl = clf_dl.feature_importances_
 
-    if rf_accuracy > dl_accuracy:
-        feature_importances = feature_importances_rf
+        if rf_accuracy > dl_accuracy:
+            feature_importances = feature_importances_rf
+        else:
+            feature_importances = feature_importances_dl
     else:
-        feature_importances = feature_importances_dl
+        feature_importances = feature_importances_rf
 
     return clf_rf, clf_dl, feature_importances
