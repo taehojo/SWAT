@@ -78,11 +78,6 @@ For example:
 
 This will handle large WGS files by breaking them into smaller chunks, running the SNP analysis on each chunk, and then merging the results.
 
-:bookmark: **SWAT citation:**
-
-> (in preparation)
-
-
 :bookmark: **Example of SWAT application:**
 
 > Jo, Taeho, et al. "Deep learning-based identification of genetic variants: application to Alzheimer’s disease classification." Briefings in Bioinformatics 23.2 (2022)
