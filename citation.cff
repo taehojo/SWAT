@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Jo"
+  given-names: "Taeho"
+  orcid: "https://orcid.org/0000-0003-1765-5735"
+title: "SWAT:Deep learning-based identification of genetic variants: application to Alzheimer’s disease classification"
+version: 1.0.0
+date-released: 2022-2-20
+url: " https://www.github.com/taehojo/SWAT"
