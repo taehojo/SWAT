@@ -6,7 +6,7 @@ SWAT (Sliding Window Association Test) is a tool for Whole Genome Sequencing (WG
 
 SWAT is designed to identify phenotype-related single nucleotide polymorphisms (SNPs), making it particularly useful for developing accurate disease classification models. The tool also includes a sophisticated imputer which is capable of automatically filling in missing data, hence improving the quality of the analysis.
 
-You can also access the web implementation of this tool at [SWAT-web](https://www.swatweb.org).
+You can also access the web implementation of this tool at [SWAT-web](https://www.swatweb.org/swat).
 
 
 ## Installation
